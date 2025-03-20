@@ -31,10 +31,10 @@ def contact(request):
 def home(request):
     images = [
         "1.png",
-         "13.png",
         "5.png",
-         "14.png",
         "6.png",
+        "13.png",
+        "14.png",
         "15.png",
     ]
     return render(request, "jobs/home.html", {"images": images})
