@@ -61,13 +61,28 @@ TEMPLATES = [
 WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 # Database configuration (fetches from Azure environment)
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default="postgres://rc:racqueC0415@racque-cordeta.postgres.database.azure.com:5432/racserver",
+#         conn_max_age=600,
+#         ssl_require=True,  # Enforce SSL for security
+#     )
+# }
+
 DATABASES = {
-    'default': dj_database_url.config(
-        default="postgres://rc:racqueC0415@racque-cordeta.postgres.database.azure.com:5432/racserver",
-        conn_max_age=600,
-        ssl_require=True,  # Enforce SSL for security
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'racserver',
+        'USER': 'rc@racque-cordeta',
+        'PASSWORD': 'racqueC0415',  # Replace with your actual password
+        'HOST': 'racque-cordeta.postgres.database.azure.com',
+        'PORT': '5432',
+        'OPTIONS': {
+            'sslmode': 'require'
+        }
+    }
 }
+
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
