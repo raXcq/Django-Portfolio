@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "/subscriptions/cfc9c7df-fc12-4bac-97e5-0fc67f8fbb40/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/racquecordeta",
+  "appService.deploySubpath": "."
+}
