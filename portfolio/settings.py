@@ -73,7 +73,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'racserver',
-        'USER': 'rc@racque-cordeta',
+        'USER': 'rc',
         'PASSWORD': 'racqueC0415',  # Replace with your actual password
         'HOST': 'racque-cordeta.postgres.database.azure.com',
         'PORT': '5432',
