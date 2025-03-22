@@ -62,7 +62,11 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 # Database configuration (fetches from Azure environment)
 DATABASES = {
-    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
+    'default': dj_database_url.config(
+        default="postgres://rc:racqueC0415@racque-cordeta.postgres.database.azure.com:5432/racserver",
+        conn_max_age=600,
+        ssl_require=True,  # Enforce SSL for security
+    )
 }
 
 # Password validation
