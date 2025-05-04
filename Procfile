@@ -1,1 +1,1 @@
-web: gunicorn Project3_Django_Portfolio.wsgi --log-file - 
+web: gunicorn Django-Portfolio.wsgi --log-file - 
